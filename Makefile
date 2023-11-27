@@ -1,6 +1,11 @@
 .PHONY: all
 
-all: l10n
+all: build-runner l10n
+
+build-runner:
+	@echo "*** Running build runner..."
+	@dart pub run build_runner build --delete-conflicting-outputs
+	@echo "*** Done."
 
 l10n:
 	@echo "*** Sorting localizations files..."
