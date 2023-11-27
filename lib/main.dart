@@ -16,7 +16,7 @@ void main() {
   _addGoogleFontLicensing();
 
   runApp(
-    const EChalk(),
+    EChalk(),
   );
 }
 
