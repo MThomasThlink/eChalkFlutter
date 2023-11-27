@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'l10n/app_localizations.dart';
+
 class EChalk extends StatelessWidget {
   const EChalk({
     super.key,
@@ -7,8 +9,11 @@ class EChalk extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Text('eChalk'),
+    return MaterialApp(
+      onGenerateTitle: (context) => AppLocalizations.of(context)!.title,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: const Text('eChalk'),
     );
   }
 }

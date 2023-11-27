@@ -1,8 +1,14 @@
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  exclude: [
+    lib/l10n/app_localizations*.dart
+  ]
+
 linter:
   rules:
-    prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    prefer_single_quotes: true
+    prefer_relative_imports: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
